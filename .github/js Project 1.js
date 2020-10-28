@@ -1,22 +1,46 @@
-let fibLocation = 5;
-let fibValue;
-
-function Fibonacci(x) {
-    let i;
-    let fib = [0, 1];
+// Milestone 1
+// let fibLocation = 5;
+// let fibValue;
 
 
-    for (i = 2; i <= 100; i++) {
-        fib[i] = fib[i - 2] + fib[i - 1];
-        console.log(fib[i]);
+// Milestone 2
+// function Fibonacci(number){
+//     // let i;
+//     let arr = [0, 1];
+
+//     for (i = 2; i < number + 1; i++){
+//         arr.push(arr[i - 2] + arr[i - 1]);
+//         // console.log(arr[number]);
+
+//     }
+//     return arr[number];
+// }
+
+
+//milestone 3
+function callFib(){
+    let fibNumber = document.getElementById("fibNumber");
+    Fibonacci(fibNumber.value);
+}
+function Fibonacci(number){
+    console.log(number)
+    // let i;
+    let arr = [0, 1];
+
+    for (i = 2; i < number + 1; i++){
+        arr.push(arr[i - 2] + arr[i - 1]);
+        // console.log(arr[number]);
 
     }
-
-    return fib[x + 1];
+    document.getElementById("result").innerHTML = arr[number]
+    // return arr[number];
 }
 
-document.getElementById("location").innerHTML = fibLocation;
+let button = document.getElementById("button");
 
-fibValue = Fibonacci(fibLocation);
+button.addEventListener("click", callFib);
 
-document.getElementById("value").innerHTML = fibValue;
+
+
+
+
