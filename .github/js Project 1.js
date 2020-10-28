@@ -5,7 +5,7 @@
 
 // Milestone 2
 // function Fibonacci(number){
-//     // let i;
+    // let i;
 //     let arr = [0, 1];
 
 //     for (i = 2; i < number + 1; i++){
@@ -24,7 +24,7 @@ function callFib(){
 }
 function Fibonacci(number){
     console.log(number)
-    // let i;
+    let i;
     let arr = [0, 1];
 
     for (i = 2; i < number + 1; i++){
