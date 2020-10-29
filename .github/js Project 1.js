@@ -42,6 +42,9 @@
 
 
 //milestone 4
+let button = document.getElementById("button");
+
+button.addEventListener("click", fetchFib);
 
 function fetchFib() {
   let url = 'http://localhost:5050/fibonacci/'+ document.getElementById("fibNumber").value;
@@ -55,9 +58,6 @@ function fetchFib() {
     });
 }
 
-let button = document.getElementById("button");
-
-button.addEventListener("click", fetchFib);
 
 
-
+// milestone 5
