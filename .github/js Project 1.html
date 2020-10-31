@@ -13,11 +13,17 @@
     <span class="span">The Fibonnaci Of</span>
         </div>
         <div class="input-number">
-          <label for="number" class="sr-only"></label>
+          <label for="number" class="sr-only" id="numberInput"></label>
           <input type="number" class="form-control" id="fibNumber">
         </div>
         <button class="btn btn-primary mb-2" id="button">is</button>
+        <div class="spinner-border" role="status" id="spinnerBorder">
+          <span class="sr-only" id="loading">Loading...</span>
+        </div>
+        <span class="comment" id="comment"></span>
         <span id="result" class="result"></span>
+          <div class="alert alert-danger" role="alert" id="invalid"> </div>
+
     <script src="./js Project 1.js"></script>
   </body>
 </html>
