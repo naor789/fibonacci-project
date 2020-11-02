@@ -48,7 +48,7 @@ body {
 }
 
 .alert {
-  margin: -27px 0 0 17% !important;
+  margin: -27px 0 0 131px !important;
   padding: 6px !important;
   width: 180px !important;
 }
@@ -65,7 +65,7 @@ body {
   padding: 10px;
 }
 
-.resultsList {
+.resultsList-h1 {
   display: inline-block;
   font-size: 54px;
   margin-left: 22px;
@@ -73,8 +73,6 @@ body {
 }
 
 #spinnerBorder2 {
-  display: inline-block;
   margin-left: 5px;
-  /* width: 52px;
-    height: 40px; */
+
 }

@@ -81,6 +81,8 @@ function spinnerLoading() {
   document.getElementById("result").style.display = "none";
 
   setTimeout(fetchFib, 1000);
+  setTimeout(fetchResult, 1000);
+
 }
 
 
@@ -122,35 +124,33 @@ function fetchFib() {
 }
 
 // milestone 6
-fetchResult();
 
 function fetchResult() {
-  let urlResult = 'http://localhost:5050/getFibonacciResults';
+  let url = 'http://localhost:5050/getFibonacciResults';
 
-  fetch(urlResult)
+  fetch(url)
     .then(function (response) {
       return response.json();
     })
     .then(function (data) {
       let dataResult = data.results;
+      let resultDiv = document.getElementById("resultsList");
+      resultsList.innerHTML = " ";
       for (i = 0; i < dataResult.length; i++) {
         let objResult = dataResult[i];
-        let resultDiv = document.getElementById("resultsList");
-        const resultsDiv1= document.createElement("div")
-        const spanResult = document.createElement('span');
+        const resultsUl= document.createElement("ul");
+        const liResult = document.createElement("li");
         document.getElementById("spinnerBorder2").style.display = "none";
-        spanResult.innerHTML = `The Fibonnaci Of <b>${objResult.number}</b> is <b>${objResult.result}</b>. Calculated at: ${new Date(objResult.createdDate)}`;
-        console.log(spanResult);
-        resultsList.appendChild(resultsDiv1);
-        resultsDiv1.appendChild(spanResult);
-        spanResult.className = "span-class";
+        liResult.innerHTML = `The Fibonnaci Of <b>${objResult.number}</b> is <b>${objResult.result}</b>. Calculated at: ${new Date(objResult.createdDate)}`;
+        console.log(liResult);
+        resultDiv.appendChild(resultsUl);
+        resultsUl.appendChild(liResult);
+        liResult.className = "span-class";
       }
   return;
     });
 }
 
-
-
-
+fetchResult();
 
 
