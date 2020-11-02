@@ -71,55 +71,84 @@ let button = document.getElementById("button");
 button.addEventListener("click", spinnerLoading);
 
 const spinnerBorder = document.getElementById("spinnerBorder");
-document.getElementById("invalid").style.display="none";
-spinnerBorder.style.display="none";
+document.getElementById("invalid").style.display = "none";
+spinnerBorder.style.display = "none";
 
-function spinnerLoading(){
-  spinnerBorder.style.display="inline-block";
-  document.getElementById("comment").style.display="none";
-  document.getElementById("invalid").style.display="none";
-  document.getElementById("result").style.display="none";
+function spinnerLoading() {
+  spinnerBorder.style.display = "inline-block";
+  document.getElementById("comment").style.display = "none";
+  document.getElementById("invalid").style.display = "none";
+  document.getElementById("result").style.display = "none";
 
   setTimeout(fetchFib, 1000);
 }
 
 
 
-function fetchFib(){
-  
+function fetchFib() {
+
 
   let fibNumber = document.getElementById("fibNumber").value;
 
   if (fibNumber == 42) {
-    document.getElementById("comment").style.display="inline-block";
-    spinnerBorder.style.display="none";
+    document.getElementById("comment").style.display = "inline-block";
+    spinnerBorder.style.display = "none";
     document.getElementById("comment").innerHTML = "Server Error: 42 is the meaning of life";
     return;
-  
+
   } else if (fibNumber > 50) {
-    document.getElementById("invalid").style.display="block";
-    spinnerBorder.style.display="none";
-   document.getElementById("invalid").innerHTML = "Can’t be larger than 50";
-   return;
+    document.getElementById("invalid").style.display = "block";
+    spinnerBorder.style.display = "none";
+    document.getElementById("invalid").innerHTML = "Can’t be larger than 50";
+    return;
 
   } else {
     let url = 'http://localhost:5050/fibonacci/' + document.getElementById("fibNumber").value;
-  
+
     fetch(url)
       .then(function (response) {
         return response.json();
       })
       .then(function (data) {
-        document.getElementById("result").style.display="inline-block";
+        document.getElementById("result").style.display = "inline-block";
         document.getElementById("loading").style.display = "none";
         document.getElementById("result").innerHTML = data.result;
-        spinnerBorder.style.display="none";
+        spinnerBorder.style.display = "none";
         return;
       });
-   
+
   }
 
 }
+
+// milestone 6
+fetchResult();
+
+function fetchResult() {
+  let urlResult = 'http://localhost:5050/getFibonacciResults';
+
+  fetch(urlResult)
+    .then(function (response) {
+      return response.json();
+    })
+    .then(function (data) {
+      let dataResult = data.results;
+      for (i = 0; i < dataResult.length; i++) {
+        let objResult = dataResult[i];
+        let resultDiv = document.getElementById("resultsList");
+        const resultsDiv1= document.createElement("div")
+        const spanResult = document.createElement('span');
+        document.getElementById("spinnerBorder2").style.display = "none";
+        spanResult.innerHTML = `The Fibonnaci Of <b>${objResult.number}</b> is <b>${objResult.result}</b>. Calculated at: ${new Date(objResult.createdDate)}`;
+        console.log(spanResult);
+        resultsList.appendChild(resultsDiv1);
+        resultsDiv1.appendChild(spanResult);
+        spanResult.className = "span-class";
+      }
+  return;
+    });
+}
+
 
 
 

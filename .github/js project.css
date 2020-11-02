@@ -1,70 +1,80 @@
-
 body {
-    padding: 10%;
-
+  padding: 10%;
 }
 .h1 {
-    font-size: 72px;
-    font-family: Open Sans;
-
+  font-size: 72px;
+  font-family: Open Sans;
 }
 
 .input-number {
-    padding: 0;
-    margin: 20px;
-    margin-left: 0;
-    width: 86px;
-    display: inline-block;
-
-
+  padding: 0;
+  margin: 20px;
+  margin-left: 0;
+  width: 86px;
+  display: inline-block;
 }
 
 .sr-only {
-    margin:20px !important;
-    display: inline-block !important;
+  margin: 20px !important;
+  display: inline-block !important;
 }
 
-
-
 .form-control {
-    display: inline-block !important;
-    width: 86px !important;
-    padding: 14px !important;
-    margin: 20px !important;
-    font-size: 24px !important;
-
+  display: inline-block !important;
+  width: 86px !important;
+  padding: 14px !important;
+  margin: 20px !important;
+  font-size: 24px !important;
 }
 
 #button {
-    display: inline-block !important;
-    margin:7px!important;
-    margin-left: 5px !important;
-    margin-bottom: 12px !important;
-
+  display: inline-block !important;
+  margin: 7px !important;
+  margin-left: 5px !important;
+  margin-bottom: 12px !important;
 }
 
 .span {
-    font-size: 24px;
-    display: inline-block;
-    margin:20px;
-    margin-right: 0;
-
+  font-size: 24px;
+  display: inline-block;
+  margin: 20px;
+  margin-right: 0;
 }
 
 .result {
-    font-size: 24px;
-    font-weight: bold;
-    text-decoration: underline;
-
+  font-size: 24px;
+  font-weight: bold;
+  text-decoration: underline;
 }
 
 .alert {
-    margin: -27px 0 0 17% !important;
-    padding: 6px !important;
-    width: 180px !important;
+  margin: -27px 0 0 17% !important;
+  padding: 6px !important;
+  width: 180px !important;
 }
 
 .comment {
-    font-size: 16px;
-    color: #D9534F;
+  font-size: 16px;
+  color: #d9534f;
+}
+
+.span-class {
+  display: block;
+  font-size: 24px;
+  border-bottom: 1px solid black;
+  padding: 10px;
+}
+
+.resultsList {
+  display: inline-block;
+  font-size: 54px;
+  margin-left: 22px;
+  padding: 0;
+}
+
+#spinnerBorder2 {
+  display: inline-block;
+  margin-left: 5px;
+  /* width: 52px;
+    height: 40px; */
 }
