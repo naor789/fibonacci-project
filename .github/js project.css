@@ -51,6 +51,7 @@ body {
   margin: -27px 0 0 131px !important;
   padding: 6px !important;
   width: 180px !important;
+  text-align: center !important;
 }
 
 .comment {
@@ -63,16 +64,28 @@ body {
   font-size: 24px;
   border-bottom: 1px solid black;
   padding: 10px;
+  margin-left: -24px;
+
 }
 
 .resultsList-h1 {
   display: inline-block;
   font-size: 54px;
-  margin-left: 22px;
   padding: 0;
+  margin: 27px 0 53px 22px;
 }
 
-#spinnerBorder2 {
-  margin-left: 5px;
+.form-check {
+padding: 0 !important;
+margin: -30px 0px 0 42px !important;
+}
+
+.form-check-input , .form-check-label{ 
+display: block !important;
+
+}
+
+.form-check-label {
+  display: block !important;
 
 }
