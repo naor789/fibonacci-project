@@ -30,8 +30,7 @@ body {
 #button {
   display: inline-block !important;
   margin: 7px !important;
-  margin-left: 5px !important;
-  margin-bottom: 12px !important;
+  margin: 0 5px 12px 0 !important;
 }
 
 .span {
